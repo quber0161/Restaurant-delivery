@@ -12,7 +12,7 @@ import { StoreContext } from "../user/context/StoreContext";
 import Extras from "./pages/Extras/Extras";
 
 const AdminApp = () => {
-  const url = "http://localhost:4000";
+  const url = "https://restaurant-delivery-ibjx.onrender.com";
   const { token, userRole } = useContext(StoreContext);
   const navigate = useNavigate();
 

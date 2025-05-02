@@ -10,7 +10,7 @@ const stripe = new Stripe(process.env.STRIPE_SECRET_KEY)
 
 //placing user order from front end
 const placeOrder = async (req, res) => {
-    const frontend_url = "http://localhost:5173";
+    const frontend_url = "https://restaurant-delivery-eight.vercel.app";
 
     try {
         const userId = req.userId;
@@ -191,7 +191,7 @@ export const createGuestStripeCheckout = async (req, res) => {
       });
     });
 
-    const frontend_url = "http://localhost:5173"; // update to production if needed
+    const frontend_url = "https://restaurant-delivery-eight.vercel.app"; // update to production if needed
 
     const session = await stripe.checkout.sessions.create({
       line_items,
@@ -233,7 +233,7 @@ const verifyOrder = async (req, res) => {
   
 
         if (guest && updatedOrder?.email && updatedOrder?.trackingToken) {
-          const trackingLink = `http://localhost:5173/track-order/${updatedOrder.trackingToken}`;
+          const trackingLink = `https://restaurant-delivery-eight.vercel.app/${updatedOrder.trackingToken}`;
           await sendTrackingEmail(updatedOrder.email, trackingLink);
 
           return res.json({

@@ -26,7 +26,7 @@ const GuestTrack = () => {
     const fetchOrder = async () => {
       try {
         const res = await axios.get(
-          `http://localhost:4000/api/order/track/${token}`
+          `https://restaurant-delivery-ibjx.onrender.com/api/order/track/${token}`
         );
         if (res.data.success) {
           setOrder(res.data.order);

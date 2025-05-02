@@ -25,7 +25,7 @@ const server = http.createServer(app)
 // ✅ Setup Socket.IO server
 const io = new Server(server, {
     cors: {
-        origin: "http://localhost:5173", // or your frontend URL
+        origin: "https://restaurant-delivery-eight.vercel.app", // or your frontend URL
         methods: ["GET", "POST"]
     }
 })
@@ -62,7 +62,7 @@ app.get("/", (req, res) => {
 
 // ✅ Use the HTTP server to listen instead of app.listen
 server.listen(port, () => {
-    console.log(`🚀 Server running at http://localhost:${port}`)
+    console.log(`🚀 Server running athttps://restaurant-delivery-eight.vercel.app:${port}`)
 })
 
 // mongodb+srv://dilushan06:<db_password>@cluster0.xbo2f.mongodb.net/?

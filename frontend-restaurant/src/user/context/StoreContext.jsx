@@ -10,7 +10,7 @@ export const StoreContext = createContext(null);
 const StoreContextProvider = (props) => {
   
   
-  const url = "http://localhost:4000";
+  const url = "https://restaurant-delivery-ibjx.onrender.com";
   const [token, setToken] = useState(localStorage.getItem("token") || "");
   const [cartItems, setCartItems] = useState(() => {
     const savedGuestCart = localStorage.getItem("guestCart");
